@@ -22,12 +22,18 @@
 		<button
 		class="pulsanti"
 		id="v2"
-		onclick="modo='quadrattini';" >
+		onclick="modo='strisce';" >
 		</button>
 
 		<br> <br> <br>
 		<button
 		class="pulsanti" id="v3"
+		onclick="modo='quadrattini';">
+		</button>
+
+		<br> <br> <br>
+		<button
+		class="pulsanti" id="v4"
 		onclick="modo='triangolo';">
 		</button>
 	</div>
@@ -146,6 +152,44 @@ function draw(){
 				rotate(200 * Math.PI / 180);
 				image(spostamento3, -500, 140, capture.height, capture.width);
 				} 
+
+				else if (modo == 'strisce') {
+					const metaA = capture.get(0, 0, capture.width, capture.height/8.8)
+            image(metaA, -metaA.width + width, 0)
+
+			rotate(180 * Math.PI / 180);
+            const metaB = capture.get(0, 45, capture.width, capture.height/8.8)
+          	image(metaB , -metaB.width + width -400, -89)
+
+			rotate(-180 * Math.PI / 180);
+            const metaC = capture.get(0, 90, capture.width, capture.height/8.8)
+            image(metaC, -metaC.width + width, 89)
+
+			rotate(180 * Math.PI / 180);
+            const metaD = capture.get(0, 135, capture.width, capture.height/8.8)
+            image(metaD, -metaD.width + width-400, -179)
+
+			rotate(-180 * Math.PI / 180);
+            const metaE = capture.get(0, 175, capture.width, capture.height/8.8)
+            image(metaE, -metaE.width + width, 178)
+
+			rotate(180 * Math.PI / 180);
+            const metaF = capture.get(0, 220, capture.width, capture.height/8.8)
+            image(metaF, -metaF.width + width-400, -268)
+
+			rotate(-180 * Math.PI / 180);
+            const metaG = capture.get(0, 265, capture.width, capture.height/8.8)
+            image(metaG, -metaG.width + width, 267)
+
+			rotate(180 * Math.PI / 180);
+            const metaH = capture.get(0, 310, capture.width, capture.height/8.8)
+            image(metaH, -metaH.width + width-400, -356)
+
+			rotate(-180 * Math.PI / 180);
+            const metaI = capture.get(0, 355, capture.width, capture.height/8.8)
+            image(metaI, -metaI.width + width, 356)
+
+				}		
 		}
 		
 		// SCRIPT SALVA IMMAGINE 
@@ -163,29 +207,47 @@ const b1 = document.querySelector("#v1")
 				b1.style.backgroundColor="none";
 				b1.style.borderColor="white";
             	b2.style.background="none";
-				b2.style.borderColor="rgb(71, 69, 69";
+				b2.style.borderColor="rgb(71, 69, 69)";
 				b3.style.background="none";
-				b3.style.borderColor="rgb(71, 69, 69";
+				b3.style.borderColor="rgb(71, 69, 69)";
+				b4.style.background="none";
+				b4.style.borderColor="rgb(71, 69, 69)";
 			})
 
 			const b2 = document.querySelector("#v2")
 			b2.addEventListener("click", function(e) {
 				b1.style.background="none";
-				b1.style.borderColor="rgb(71, 69, 69";
+				b1.style.borderColor="rgb(71, 69, 69)";
             	b2.style.backgroundColor="none";
 				b2.style.borderColor="white";
 				b3.style.background="none";
-				b3.style.borderColor="rgb(71, 69, 69";
+				b3.style.borderColor="rgb(71, 69, 69)";
+				b4.style.background="none";
+				b4.style.borderColor="rgb(71, 69, 69)";
 			})
 
 			const b3 = document.querySelector("#v3")
 			b3.addEventListener("click", function(e) {
 				b1.style.background="none";
-				b1.style.borderColor="rgb(71, 69, 69";
+				b1.style.borderColor="rgb(71, 69, 69)";
             	b2.style.background="none";
-				b2.style.borderColor="rgb(71, 69, 69";
+				b2.style.borderColor="rgb(71, 69, 69)";
 				b3.style.backgroundColor="none";
 				b3.style.borderColor="white";
+				b4.style.background="none";
+				b4.style.borderColor="rgb(71, 69, 69)";
+			})
+
+			const b4 = document.querySelector("#v4")
+			b4.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="rgb(71, 69, 69)";
+            	b2.style.background="none";
+				b2.style.borderColor="rgb(71, 69, 69)";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="rgb(71, 69, 69)";
+				b4.style.background="none";
+				b4.style.borderColor="white";
 			})
 </script>
 
