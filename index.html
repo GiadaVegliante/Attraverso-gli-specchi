@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova bottoni</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div class="Testo">Attraverso gli specchi</div>
+
+		<!-- SCRIPT BOTTONI -->
+	<div class="interfaccia">
+
+		<button class="pulsanti" id="v1"
+		onclick="modo='fette';">
+		</button>
+
+		<br> <br> <br>
+		<button
+		class="pulsanti"
+		id="v2"
+		onclick="modo='quadrattini';" >
+		</button>
+
+		<br> <br> <br>
+		<button
+		class="pulsanti" id="v3"
+		onclick="modo='triangolo';">
+		</button>
+	</div>
+
+		<!-- SCRIPT WEBCAM -->
+	<script>
+		let capture
+		var modo = 'red'
+
+		function setup(){
+			createCanvas(400, 400)
+			capture = createCapture(VIDEO)
+			capture.size(400, 400)
+			capture.hide()
+		}
+		
+function draw(){
+	image(capture, 0, 0, capture.width, capture.height)
+
+	if (modo == 'niente') { 
+	} else if (modo == 'fette') {
+		const metaD = capture.get(170, 0, capture.width/4, capture.height)
+            image(metaD, -metaD.width + width/4 +155, 0)
+            const metaS = capture.get(120, 0, capture.width/6, capture.height)
+            image(metaS, -metaS.width + width/6 +0, 0)
+            const metaSS = capture.get(140, 0, capture.width/6, capture.height)
+            image(metaSS, -metaSS.width + width/6 +20, 0)
+            const metaA = capture.get(155, 0, capture.width/6, capture.height)
+            image(metaA, -metaA.width + width/6 +50, 0)
+            const metaB = capture.get(165, 0, capture.width/6, capture.height)
+            image(metaB, -metaB.width + width/6 +90, 0)
+
+            const metaE = capture.get(230, 0, capture.width/6, capture.height)
+            image(metaE, -metaE.width + width/6 +340, 0)
+            const metaT = capture.get(220, 0, capture.width/6, capture.height)
+            image(metaT, -metaT.width + width/6 +315, 0)
+            const metaQ = capture.get(205, 0, capture.width/6, capture.height)
+            image(metaQ, -metaQ.width + width/6 +285, 0)
+            const metaG = capture.get(195, 0, capture.width/6, capture.height)
+            image(metaG, -metaG.width + width/6 +245, 0)
+            const metaAA = capture.get(170, 0, capture.width/6, capture.height)
+            image(metaAA, -metaAA.width + width/6 +500, 0)
+            const metaa = capture.get(85, 0, capture.width/6, capture.height)
+            image(metaa, -metaa.width + width/6 -50, 0)
+	}  
+	
+	else if (modo == 'quadrattini') {
+		const metaD = capture.get(250, 320, capture.width/5, capture.height/5)
+			image(metaD, -metaD.width + width/5, 0)
+			const metaZ = capture.get(170, 250, capture.width/5, capture.height/5)
+			image(metaZ, -metaZ.width + width/5 +80, 0)
+			const metaU = capture.get(320, 320, capture.width/5, capture.height/5) 
+			image(metaU, -metaU.width + width/5 +160, 0)
+			const metaO = capture.get(250, 90, capture.width/5, capture.height/5)
+			image(metaO, -metaO.width + width/5 +240, 0)
+			const metaX = capture.get(10, 300, capture.width/5, capture.height/5)
+			image(metaX, -metaX.width + width/5 +320, 0)
+
+			const metaQQ = capture.get(250, 10, capture.width/5, capture.height/5)
+			image(metaQQ, -metaQQ.width + width/5, 80)
+			const metaTT = capture.get(90, 90, capture.width/5, capture.height/5)
+			image(metaTT, -metaTT.width + width/5 +80, 80)
+			const metaY = capture.get(10, 170, capture.width/5, capture.height/5)
+			image(metaY, -metaY.width + width/5 +160, 80)
+			const metaR = capture.get(10, 90, capture.width/5, capture.height/5)
+			image(metaR, -metaR.width + width/5 +240, 80)
+			const metaAA = capture.get(320, 10, capture.width/5, capture.height/5)
+			image(metaAA, -metaAA.width + width/5 +320, 80)
+
+			const metaQ = capture.get(250, 250, capture.width/5, capture.height/5)
+			image(metaQ, -metaQ.width + width/5 +320, 160)
+			const metaA = capture.get(170, 90, capture.width/5, capture.height/5)
+			image(metaA, -metaA.width + width/5, 160)
+			const metaE = capture.get(90, 170, capture.width/5, capture.height/5)
+			image(metaE, -metaE.width + width/5 +80, 160)
+			const metaS = capture.get(170, 170, capture.width/5, capture.height/5)
+			image(metaS, -metaS.width + width/5 +160, 160)
+			const metaW = capture.get(250, 170, capture.width/5, capture.height/5)
+			image(metaW, -metaW.width + width/5 +240, 160)
+			
+			const metaC = capture.get(10, 250, capture.width/5, capture.height/5)
+			image(metaC, -metaC.width + width/5, 240)
+			const metaV = capture.get(90, 250, capture.width/5, capture.height/5)
+			image(metaV, -metaV.width + width/5 +80, 240)
+			const metaB = capture.get(90, 10, capture.width/5, capture.height/5)
+			image(metaB, -metaB.width + width/5 +160, 240)
+			const metaN = capture.get(300, 160, capture.width/5, capture.height/5)
+			image(metaN, -metaN.width + width/5 +240, 240)
+			const metaM = capture.get(300, 250, capture.width/5, capture.height/5)
+			image(metaM, -metaM.width + width/5 +320, 240)
+			
+			const metaK = capture.get(300, 90, capture.width/5, capture.height/5)
+			image(metaK, -metaK.width + width/5, 320)
+			const metaL = capture.get(170, 300, capture.width/5, capture.height/5)
+			image(metaL, -metaL.width + width/5 +80, 320)
+			const metaPP = capture.get(90, 300, capture.width/5, capture.height/5)
+			image(metaPP, -metaPP.width + width/5 +160, 320)
+			const metaKK = capture.get(10, 10, capture.width/5, capture.height/5)
+			image(metaKK, -metaKK.width + width/5 +240, 320)
+			const metaII = capture.get(170, 10, capture.width/5, capture.height/5)
+			image(metaII, -metaII.width + width/5 +320, 320)
+			} 
+			
+			else if (modo == 'triangolo') {
+				image(capture, 0, 0, capture.height, capture.width);
+
+				const spostamento1 = capture.get(0, -200, capture.width, capture.height)
+				rotate(170 * Math.PI / 180);
+				image(spostamento1, -400, -820, capture.height*1.2, capture.width*1.2,);
+
+				const spostamento2 = capture.get(-150, 0, capture.width, capture.height)
+				rotate(220 * Math.PI / 180);
+				image(spostamento2, -230, -110, capture.height, capture.width);
+
+				const spostamento3 = capture.get(0, 240, capture.width, capture.height)
+				rotate(200 * Math.PI / 180);
+				image(spostamento3, -500, 140, capture.height, capture.width);
+				} 
+		}
+		
+		// SCRIPT SALVA IMMAGINE 
+		function keyPressed(){
+			if (key == 's') {
+				save(Date.now() + '.png')
+			}
+		}
+	</script>
+
+<!-- SCRIPT BOTTONI -->
+<script type="text/javascript"> 
+const b1 = document.querySelector("#v1")
+			b1.addEventListener("click", function(e) {
+				b1.style.backgroundColor="none";
+				b1.style.borderColor="white";
+            	b2.style.background="none";
+				b2.style.borderColor="rgb(71, 69, 69";
+				b3.style.background="none";
+				b3.style.borderColor="rgb(71, 69, 69";
+			})
+
+			const b2 = document.querySelector("#v2")
+			b2.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="rgb(71, 69, 69";
+            	b2.style.backgroundColor="none";
+				b2.style.borderColor="white";
+				b3.style.background="none";
+				b3.style.borderColor="rgb(71, 69, 69";
+			})
+
+			const b3 = document.querySelector("#v3")
+			b3.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="rgb(71, 69, 69";
+            	b2.style.background="none";
+				b2.style.borderColor="rgb(71, 69, 69";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="white";
+			})
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+</body>
+
+</html>
