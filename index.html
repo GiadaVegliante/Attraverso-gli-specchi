@@ -52,10 +52,12 @@
 		
 function draw(){
 	image(capture, 0, 0, capture.width, capture.height)
+	tint(255, 126);
 
 	if (modo == 'niente') { 
 	} else if (modo == 'fette') {
-		const metaD = capture.get(170, 0, capture.width/4, capture.height)
+		tint(255, 255);
+			const metaD = capture.get(170, 0, capture.width/4, capture.height)
             image(metaD, -metaD.width + width/4 +155, 0)
             const metaS = capture.get(120, 0, capture.width/6, capture.height)
             image(metaS, -metaS.width + width/6 +0, 0)
@@ -81,6 +83,7 @@ function draw(){
 	}  
 	
 	else if (modo == 'quadrattini') {
+		tint(255, 126);
 		const metaD = capture.get(250, 320, capture.width/5, capture.height/5)
 			image(metaD, -metaD.width + width/5, 0)
 			const metaZ = capture.get(170, 250, capture.width/5, capture.height/5)
@@ -143,6 +146,7 @@ function draw(){
 				const spostamento1 = capture.get(0, -200, capture.width, capture.height)
 				rotate(170 * Math.PI / 180);
 				image(spostamento1, -400, -820, capture.height*1.2, capture.width*1.2,);
+				
 
 				const spostamento2 = capture.get(-150, 0, capture.width, capture.height)
 				rotate(220 * Math.PI / 180);
