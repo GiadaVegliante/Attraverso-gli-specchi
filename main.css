@@ -39,7 +39,16 @@ border: 1px solid rgb(71, 69, 69);
 .interfaccia {
     position: absolute;
     left:60%;
-    top: 40%;
+    top: 38%;
     height: 60px;
     width: 120px;
 }
+
+.indice{
+    position: absolute;
+    color: rgba(111, 110, 110, 0.689);
+    font-family: Futura;
+    font-size: 20px;
+    right:1%;
+    top:1%;
+    }
