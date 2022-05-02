@@ -52,8 +52,13 @@
 		}
 		
 function draw(){
-	image(capture, 0, 0, capture.width, capture.height)
-	tint(255, 126);
+//	image(capture, 0, 0, capture.width, capture.height)
+background(0)
+stroke(255,255,255)
+noFill()
+square(0, 0, 399);
+
+	tint(255, 150);
 
 	if (modo == 'niente') { 
 	} else if (modo == 'fette') {
@@ -85,31 +90,31 @@ function draw(){
 	
 	else if (modo == 'quadrattini') {
 		tint(255, 126);
-		const metaD = capture.get(250, 320, capture.width/5, capture.height/5)
+		const metaD = capture.get(250+mouseX, 320+mouseY, capture.width/5, capture.height/5)
 			image(metaD, -metaD.width + width/5, 0)
-			const metaZ = capture.get(170, 250, capture.width/5, capture.height/5)
+			const metaZ = capture.get(170+mouseX, 250+mouseY, capture.width/5, capture.height/5)
 			image(metaZ, -metaZ.width + width/5 +80, 0)
-			const metaU = capture.get(320, 320, capture.width/5, capture.height/5) 
+			const metaU = capture.get(320+mouseX, 320+mouseY, capture.width/5, capture.height/5) 
 			image(metaU, -metaU.width + width/5 +160, 0)
-			const metaO = capture.get(250, 90, capture.width/5, capture.height/5)
+			const metaO = capture.get(250+mouseX, 90+mouseY, capture.width/5, capture.height/5)
 			image(metaO, -metaO.width + width/5 +240, 0)
-			const metaX = capture.get(10, 300, capture.width/5, capture.height/5)
+			const metaX = capture.get(10+mouseX, 300+mouseY, capture.width/5, capture.height/5)
 			image(metaX, -metaX.width + width/5 +320, 0)
 
-			const metaQQ = capture.get(250, 10, capture.width/5, capture.height/5)
+			const metaQQ = capture.get(250+mouseX, 10+mouseY, capture.width/5, capture.height/5)
 			image(metaQQ, -metaQQ.width + width/5, 80)
 			const metaTT = capture.get(90, 90, capture.width/5, capture.height/5)
 			image(metaTT, -metaTT.width + width/5 +80, 80)
-			const metaY = capture.get(10, 170, capture.width/5, capture.height/5)
+			const metaY = capture.get(170, 90, capture.width/5, capture.height/5)
 			image(metaY, -metaY.width + width/5 +160, 80)
-			const metaR = capture.get(10, 90, capture.width/5, capture.height/5)
+			const metaR = capture.get(10+mouseX, 90+mouseY, capture.width/5, capture.height/5)
 			image(metaR, -metaR.width + width/5 +240, 80)
-			const metaAA = capture.get(320, 10, capture.width/5, capture.height/5)
+			const metaAA = capture.get(320+mouseX, 10+mouseY, capture.width/5, capture.height/5)
 			image(metaAA, -metaAA.width + width/5 +320, 80)
 
-			const metaQ = capture.get(250, 250, capture.width/5, capture.height/5)
+			const metaQ = capture.get(250+mouseX, 250+mouseY, capture.width/5, capture.height/5)
 			image(metaQ, -metaQ.width + width/5 +320, 160)
-			const metaA = capture.get(170, 90, capture.width/5, capture.height/5)
+			const metaA = capture.get(170+mouseX, 90+mouseY, capture.width/5, capture.height/5)
 			image(metaA, -metaA.width + width/5, 160)
 			const metaE = capture.get(90, 170, capture.width/5, capture.height/5)
 			image(metaE, -metaE.width + width/5 +80, 160)
@@ -122,23 +127,40 @@ function draw(){
 			image(metaC, -metaC.width + width/5, 240)
 			const metaV = capture.get(90, 250, capture.width/5, capture.height/5)
 			image(metaV, -metaV.width + width/5 +80, 240)
-			const metaB = capture.get(90, 10, capture.width/5, capture.height/5)
+			const metaB = capture.get(90+mouseX, 10+mouseY, capture.width/5, capture.height/5)
 			image(metaB, -metaB.width + width/5 +160, 240)
-			const metaN = capture.get(300, 160, capture.width/5, capture.height/5)
+			const metaN = capture.get(300+mouseX, 160+mouseY, capture.width/5, capture.height/5)
 			image(metaN, -metaN.width + width/5 +240, 240)
-			const metaM = capture.get(300, 250, capture.width/5, capture.height/5)
+			const metaM = capture.get(300+mouseX, 250+mouseY, capture.width/5, capture.height/5)
 			image(metaM, -metaM.width + width/5 +320, 240)
 			
-			const metaK = capture.get(300, 90, capture.width/5, capture.height/5)
+			const metaK = capture.get(300+mouseX, 90+mouseY, capture.width/5, capture.height/5)
 			image(metaK, -metaK.width + width/5, 320)
-			const metaL = capture.get(170, 300, capture.width/5, capture.height/5)
+			const metaL = capture.get(170+mouseX, 300+mouseY, capture.width/5, capture.height/5)
 			image(metaL, -metaL.width + width/5 +80, 320)
-			const metaPP = capture.get(90, 300, capture.width/5, capture.height/5)
+			const metaPP = capture.get(90+mouseX, 300+mouseY, capture.width/5, capture.height/5)
 			image(metaPP, -metaPP.width + width/5 +160, 320)
-			const metaKK = capture.get(10, 10, capture.width/5, capture.height/5)
+			const metaKK = capture.get(10+mouseX, 10+mouseY, capture.width/5, capture.height/5)
 			image(metaKK, -metaKK.width + width/5 +240, 320)
-			const metaII = capture.get(170, 10, capture.width/5, capture.height/5)
+			const metaII = capture.get(170+mouseX, 10+mouseY, capture.width/5, capture.height/5)
 			image(metaII, -metaII.width + width/5 +320, 320)
+			} 
+			
+			else if (modo == 'triangolo') {
+				image(capture, 0, 0, capture.height, capture.width);
+
+				const spostamento1 = capture.get(0, -200, capture.width, capture.height)
+				rotate(170 * Math.PI / 180);
+				image(spostamento1, -400, -820, capture.height*1.2, capture.width*1.2,);
+				
+
+				const spostamento2 = capture.get(-150, 0, capture.width, capture.height)
+				rotate(220 * Math.PI / 180);
+				image(spostamento2, -230, -110, capture.height, capture.width);
+
+				const spostamento3 = capture.get(0, 240, capture.width, capture.height)
+				rotate(200 * Math.PI / 180);
+				image(spostamento3, -500, 140, capture.height, capture.width);
 			} 
 			
 			else if (modo == 'triangolo') {
@@ -159,39 +181,41 @@ function draw(){
 				} 
 
 				else if (modo == 'strisce') {
+					image(capture, 0, 0, capture.width, capture.height)
+					
 					const metaA = capture.get(0, 0, capture.width, capture.height/8.8)
             image(metaA, -metaA.width + width, 0)
 
 			rotate(180 * Math.PI / 180);
-            const metaB = capture.get(0, 45, capture.width, capture.height/8.8)
+            const metaB = capture.get(0, 45+mouseY, capture.width, capture.height/8.8)
           	image(metaB , -metaB.width + width -400, -89)
 
 			rotate(-180 * Math.PI / 180);
-            const metaC = capture.get(0, 90, capture.width, capture.height/8.8)
+            const metaC = capture.get(0, 90+mouseY, capture.width, capture.height/8.8)
             image(metaC, -metaC.width + width, 89)
 
 			rotate(180 * Math.PI / 180);
-            const metaD = capture.get(0, 135, capture.width, capture.height/8.8)
+            const metaD = capture.get(0, 135+mouseY, capture.width, capture.height/8.8)
             image(metaD, -metaD.width + width-400, -179)
 
 			rotate(-180 * Math.PI / 180);
-            const metaE = capture.get(0, 175, capture.width, capture.height/8.8)
+            const metaE = capture.get(0, 175+mouseY, capture.width, capture.height/8.8)
             image(metaE, -metaE.width + width, 178)
 
 			rotate(180 * Math.PI / 180);
-            const metaF = capture.get(0, 220, capture.width, capture.height/8.8)
+            const metaF = capture.get(0, 220+mouseY, capture.width, capture.height/8.8)
             image(metaF, -metaF.width + width-400, -268)
 
 			rotate(-180 * Math.PI / 180);
-            const metaG = capture.get(0, 265, capture.width, capture.height/8.8)
+            const metaG = capture.get(0, 265+mouseY, capture.width, capture.height/8.8)
             image(metaG, -metaG.width + width, 267)
 
 			rotate(180 * Math.PI / 180);
-            const metaH = capture.get(0, 310, capture.width, capture.height/8.8)
+            const metaH = capture.get(0, 310+mouseY, capture.width, capture.height/8.8)
             image(metaH, -metaH.width + width-400, -356)
 
 			rotate(-180 * Math.PI / 180);
-            const metaI = capture.get(0, 355, capture.width, capture.height/8.8)
+            const metaI = capture.get(0, 355+mouseY, capture.width, capture.height/8.8)
             image(metaI, -metaI.width + width, 356)
 
 				}		
@@ -199,9 +223,11 @@ function draw(){
 		
 		// SCRIPT SALVA IMMAGINE 
 		function keyPressed(){
+			
 			if (key == 's') {
 				save(Date.now() + '.png')
-			}
+			} 
+			//else if (key == 'x') { }
 		}
 	</script>
 
