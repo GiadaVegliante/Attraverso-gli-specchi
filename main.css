@@ -51,8 +51,9 @@ border: 1px solid grey;
 .interfaccia {
     position: absolute;
     left:50%;
-    margin-top: 290px;	
+    margin-bottom: -10px;	
     margin-left: 50px;
+    bottom:70%;
 }
 
 .indice{
@@ -66,6 +67,6 @@ border: 1px solid grey;
 
     .interfaccia input[type="number"] {
         height: 15px;
-        background-color: rgb(144, 144, 144);
+        background-color: rgb(209, 209, 209);
         width: 150px;
     }
