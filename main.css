@@ -2,7 +2,7 @@
 canvas {
     position:absolute;
     top:55%;
-    left:45%;
+    left:50%;
     margin-left: -200px;
     margin-top: -200px;
     width: 400px;
@@ -19,9 +19,9 @@ color: rgb(255, 255, 255);
 font-family: Futura;
 font-size: 35px;
 font-weight: 500;
-top:10%;
+top:15%;
 left:50%;
-margin-left: -250px;
+margin-left: -200px;
 margin-top: 0px;	
 }
 
@@ -31,9 +31,9 @@ margin-top: 0px;
     font-family: Futura;
     font-size: 20px;
     font-weight: 100;
-    top:10%;
+    top:15%;
     left:50%;
-    margin-left: -250px;
+    margin-left: -200px;
     margin-top: 50px;	
     }
 
@@ -50,10 +50,9 @@ border: 1px solid grey;
 
 .interfaccia {
     position: absolute;
-    left:60%;
-    top: 38%;
-    height: 60px;
-    width: 120px;
+    left:50%;
+    margin-top: 290px;	
+    margin-left: 50px;
 }
 
 .indice{
@@ -61,6 +60,12 @@ border: 1px solid grey;
     color: grey;
     font-family: Futura;
     font-size: 20px;
-    right:1%;
+    left:1%;
     top:1%;
+    }
+
+    .interfaccia input[type="number"] {
+        height: 15px;
+        background-color: rgb(144, 144, 144);
+        width: 150px;
     }

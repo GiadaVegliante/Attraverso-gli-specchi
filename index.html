@@ -15,59 +15,8 @@
 
 		<!-- SCRIPT BOTTONI -->
 	<div class="interfaccia">
-
-		<button class="pulsanti" id="v1"
-		onclick="modo='1';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti"
-		id="v2"
-		onclick="modo='2';" >
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v3"
-		onclick="modo='3';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v4"
-		onclick="modo='4';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v5"
-		onclick="modo='5';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v6"
-		onclick="modo='6';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v7"
-		onclick="modo='7';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v8"
-		onclick="modo='8';">
-		</button>
-
-		<br> 		<br> 
-		<button
-		class="pulsanti" id="v9"
-		onclick="modo='9';">
-		</button>
+		<label for="#input-filtri"> </label>
+		<input id="input-filtri" type="number">
 	</div>
 
 		<!-- SCRIPT WEBCAM -->
@@ -341,219 +290,37 @@ square(0, 0, 400);
 	} 
 
 		}
-		
+
+		// SCRIPT CAMBIA FILTRO  
+		document.querySelector("#input-filtri").addEventListener("change", function(e){          
+ if (e.target.value == "1" ) { 
+ modo='1'  }
+ else if (e.target.value == "2" )  {
+	 modo='2'  }
+ else if (e.target.value == "3" )  {
+	 modo='3'  }
+	 else if (e.target.value == "4" )  {
+	 modo='4'  }
+	 else if (e.target.value == "5" )  {
+	 modo='5'  }
+	 else if (e.target.value == "6" )  {
+	 modo='6'  }
+	 else if (e.target.value == "7" )  {
+	 modo='7'  }
+	 else if (e.target.value == "8" )  {
+	 modo='8'  }
+	 else if (e.target.value == "9" )  {
+	 modo='9'  }
+})
+
 		// SCRIPT SALVA IMMAGINE 
 		function keyPressed(){
-			
 			if (key == 's') {
 				save(Date.now() + '.png')
 			} 
 			//else if (key == 'x') { }
 		}
 	</script>
-
-<!-- SCRIPT BOTTONI -->
-<script type="text/javascript"> 
-const b1 = document.querySelector("#v1")
-			b1.addEventListener("click", function(e) {
-				b1.style.backgroundColor="none";
-				b1.style.borderColor="white";
-			//	b1.style.borderStroke="10px";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.background="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b2 = document.querySelector("#v2")
-			b2.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.backgroundColor="none";
-				b2.style.borderColor="white";
-				b3.style.background="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b3 = document.querySelector("#v3")
-			b3.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="white";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b4 = document.querySelector("#v4")
-			b4.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="white";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b5 = document.querySelector("#v5")
-			b5.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="white";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b6 = document.querySelector("#v6")
-			b6.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="white";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b7 = document.querySelector("#v7")
-			b7.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="white";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-			const b8 = document.querySelector("#v8")
-			b8.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="white";
-				b9.style.background="none";
-				b9.style.borderColor="grey";
-			})
-
-
-			const b9 = document.querySelector("#v9")
-			b9.addEventListener("click", function(e) {
-				b1.style.background="none";
-				b1.style.borderColor="grey";
-            	b2.style.background="none";
-				b2.style.borderColor="grey";
-				b3.style.backgroundColor="none";
-				b3.style.borderColor="grey";
-				b4.style.background="none";
-				b4.style.borderColor="grey";
-				b5.style.background="none";
-				b5.style.borderColor="grey";
-				b6.style.background="none";
-				b6.style.borderColor="grey";
-				b7.style.background="none";
-				b7.style.borderColor="grey";
-				b8.style.background="none";
-				b8.style.borderColor="grey";
-				b9.style.background="none";
-				b9.style.borderColor="white";
-			})
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
 </body>
