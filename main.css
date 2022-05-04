@@ -15,25 +15,37 @@ background: rgb(0, 0, 0);
 
 .Testo{
 position: absolute;
-color: aliceblue;
+color: rgb(255, 255, 255);
 font-family: Futura;
-font-size: 60px;
+font-size: 35px;
 font-weight: 500;
-top:30%;
+top:10%;
 left:50%;
-margin-left: -370px;
-margin-top: -150px;	
+margin-left: -250px;
+margin-top: 0px;	
 }
+
+.sottotitolo{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.872);
+    font-family: Futura;
+    font-size: 20px;
+    font-weight: 100;
+    top:10%;
+    left:50%;
+    margin-left: -250px;
+    margin-top: 50px;	
+    }
 
 button{
 position: relative;
 bottom: 40%;
 left:60%;
 background: none;
-height: 60px;
-width: 120px;
+height: 20px;
+width: 50px;
 cursor: pointer;
-border: 1px solid rgb(71, 69, 69);
+border: 1px solid grey;
 }
 
 .interfaccia {
@@ -46,7 +58,7 @@ border: 1px solid rgb(71, 69, 69);
 
 .indice{
     position: absolute;
-    color: rgba(111, 110, 110, 0.689);
+    color: grey;
     font-family: Futura;
     font-size: 20px;
     right:1%;

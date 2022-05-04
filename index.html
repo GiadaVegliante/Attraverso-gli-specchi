@@ -11,38 +11,69 @@
 <body>
 	<a class="indice" href=""> Indice </a>
 	<div class="Testo">Attraverso gli specchi</div>
+	<div class="sottotitolo">Raccolta</div>
 
 		<!-- SCRIPT BOTTONI -->
 	<div class="interfaccia">
 
 		<button class="pulsanti" id="v1"
-		onclick="modo='fette';">
+		onclick="modo='1';">
 		</button>
 
-		<br> <br> <br>
+		<br> 		<br> 
 		<button
 		class="pulsanti"
 		id="v2"
-		onclick="modo='strisce';" >
+		onclick="modo='2';" >
 		</button>
 
-		<br> <br> <br>
+		<br> 		<br> 
 		<button
 		class="pulsanti" id="v3"
-		onclick="modo='quadrattini';">
+		onclick="modo='3';">
 		</button>
 
-		<br> <br> <br>
+		<br> 		<br> 
 		<button
 		class="pulsanti" id="v4"
-		onclick="modo='triangolo';">
+		onclick="modo='4';">
+		</button>
+
+		<br> 		<br> 
+		<button
+		class="pulsanti" id="v5"
+		onclick="modo='5';">
+		</button>
+
+		<br> 		<br> 
+		<button
+		class="pulsanti" id="v6"
+		onclick="modo='6';">
+		</button>
+
+		<br> 		<br> 
+		<button
+		class="pulsanti" id="v7"
+		onclick="modo='7';">
+		</button>
+
+		<br> 		<br> 
+		<button
+		class="pulsanti" id="v8"
+		onclick="modo='8';">
+		</button>
+
+		<br> 		<br> 
+		<button
+		class="pulsanti" id="v9"
+		onclick="modo='9';">
 		</button>
 	</div>
 
 		<!-- SCRIPT WEBCAM -->
 	<script>
 		let capture
-		var modo = 'red'
+		var modo = 'prova'
 
 		function setup(){
 			createCanvas(400, 400)
@@ -54,42 +85,42 @@
 function draw(){
 //	image(capture, 0, 0, capture.width, capture.height)
 background(0)
+
 stroke(255,255,255)
 noFill()
-square(0, 0, 399);
+square(0, 0, 400);
 
 	tint(255, 150);
 
 	if (modo == 'niente') { 
-	} else if (modo == 'fette') {
+	} else if (modo == '1') {
 		tint(255, 255);
-			const metaD = capture.get(170, 0, capture.width/4, capture.height)
+		const metaD = capture.get(170+mouseX, 0, capture.width/4, capture.height)
             image(metaD, -metaD.width + width/4 +155, 0)
-            const metaS = capture.get(120, 0, capture.width/6, capture.height)
+            const metaS = capture.get(120+mouseX, 0, capture.width/6, capture.height)
             image(metaS, -metaS.width + width/6 +0, 0)
-            const metaSS = capture.get(140, 0, capture.width/6, capture.height)
+            const metaSS = capture.get(140+mouseX, 0, capture.width/6, capture.height)
             image(metaSS, -metaSS.width + width/6 +20, 0)
-            const metaA = capture.get(155, 0, capture.width/6, capture.height)
+            const metaA = capture.get(155+mouseX, 0, capture.width/6, capture.height)
             image(metaA, -metaA.width + width/6 +50, 0)
-            const metaB = capture.get(165, 0, capture.width/6, capture.height)
+            const metaB = capture.get(165+mouseX, 0, capture.width/6, capture.height)
             image(metaB, -metaB.width + width/6 +90, 0)
 
-            const metaE = capture.get(230, 0, capture.width/6, capture.height)
+            const metaE = capture.get(230+mouseX, 0, capture.width/6, capture.height)
             image(metaE, -metaE.width + width/6 +340, 0)
-            const metaT = capture.get(220, 0, capture.width/6, capture.height)
+            const metaT = capture.get(220+mouseX, 0, capture.width/6, capture.height)
             image(metaT, -metaT.width + width/6 +315, 0)
-            const metaQ = capture.get(205, 0, capture.width/6, capture.height)
+            const metaQ = capture.get(205+mouseX, 0, capture.width/6, capture.height)
             image(metaQ, -metaQ.width + width/6 +285, 0)
-            const metaG = capture.get(195, 0, capture.width/6, capture.height)
+            const metaG = capture.get(195+mouseX, 0, capture.width/6, capture.height)
             image(metaG, -metaG.width + width/6 +245, 0)
-            const metaAA = capture.get(170, 0, capture.width/6, capture.height)
+            const metaAA = capture.get(170+mouseX, 0, capture.width/6, capture.height)
             image(metaAA, -metaAA.width + width/6 +500, 0)
-            const metaa = capture.get(85, 0, capture.width/6, capture.height)
+            const metaa = capture.get(85+mouseX, 0, capture.width/6, capture.height)
             image(metaa, -metaa.width + width/6 -50, 0)
-	}  
-	
-	else if (modo == 'quadrattini') {
-		tint(255, 126);
+		
+	}  else if (modo == '2') {
+		tint(255, 200);
 		const metaD = capture.get(250+mouseX, 320+mouseY, capture.width/5, capture.height/5)
 			image(metaD, -metaD.width + width/5, 0)
 			const metaZ = capture.get(170+mouseX, 250+mouseY, capture.width/5, capture.height/5)
@@ -144,43 +175,10 @@ square(0, 0, 399);
 			image(metaKK, -metaKK.width + width/5 +240, 320)
 			const metaII = capture.get(170+mouseX, 10+mouseY, capture.width/5, capture.height/5)
 			image(metaII, -metaII.width + width/5 +320, 320)
-			} 
-			
-			else if (modo == 'triangolo') {
-				image(capture, 0, 0, capture.height, capture.width);
+		
+	} else if (modo == '3') {
+		tint(255, 150);
 
-				const spostamento1 = capture.get(0, -200, capture.width, capture.height)
-				rotate(170 * Math.PI / 180);
-				image(spostamento1, -400, -820, capture.height*1.2, capture.width*1.2,);
-				
-
-				const spostamento2 = capture.get(-150, 0, capture.width, capture.height)
-				rotate(220 * Math.PI / 180);
-				image(spostamento2, -230, -110, capture.height, capture.width);
-
-				const spostamento3 = capture.get(0, 240, capture.width, capture.height)
-				rotate(200 * Math.PI / 180);
-				image(spostamento3, -500, 140, capture.height, capture.width);
-			} 
-			
-			else if (modo == 'triangolo') {
-				image(capture, 0, 0, capture.height, capture.width);
-
-				const spostamento1 = capture.get(0, -200, capture.width, capture.height)
-				rotate(170 * Math.PI / 180);
-				image(spostamento1, -400, -820, capture.height*1.2, capture.width*1.2,);
-				
-
-				const spostamento2 = capture.get(-150, 0, capture.width, capture.height)
-				rotate(220 * Math.PI / 180);
-				image(spostamento2, -230, -110, capture.height, capture.width);
-
-				const spostamento3 = capture.get(0, 240, capture.width, capture.height)
-				rotate(200 * Math.PI / 180);
-				image(spostamento3, -500, 140, capture.height, capture.width);
-				} 
-
-				else if (modo == 'strisce') {
 					image(capture, 0, 0, capture.width, capture.height)
 					
 					const metaA = capture.get(0, 0, capture.width, capture.height/8.8)
@@ -217,8 +215,131 @@ square(0, 0, 399);
 			rotate(-180 * Math.PI / 180);
             const metaI = capture.get(0, 355+mouseY, capture.width, capture.height/8.8)
             image(metaI, -metaI.width + width, 356)
+		
+	} else if (modo == '4') {
+		tint(255, 180);
+			
+			const spessore = 3000
+			const passo = spessore / mouseY
+			const passo2 = spessore / mouseX
+			const numX = height / passo
+			
+			for(let j=0; j<numX; j++) {
+				const rx = j * passo2
+				image(capture,rx, 0)
+				}
+		
+	} else if (modo == '5') {
+		tint(255, 255);
+	image(capture, 0, 0, capture.height, capture.width);
 
-				}		
+	tint(255, 150);
+			//	rotate(20 * Math.PI / 180);
+			//	image(capture, 100, 200, capture.height/2, capture.width/2);
+
+			//	rotate(40 * Math.PI / 180);
+			//	image(capture, 0, 0, capture.height/3, capture.width/3);
+
+				const spostamento1 = capture.get(0, -200, capture.width, capture.height)
+				rotate(mouseX * Math.PI / 180);
+				image(spostamento1, -400, -810, capture.height*1.2, capture.width*1.2,);
+
+				const spostamento2 = capture.get(-150, 0, capture.width, capture.height)
+				rotate(220 * Math.PI / 180);
+				image(spostamento2, -230, -110, capture.height, capture.width);
+
+				const spostamento3 = capture.get(0, 140, capture.width, capture.height)
+				rotate(200 * Math.PI / 180);
+				image(spostamento3, -500, 140, capture.height, capture.width);
+
+				const spostamento4 = capture.get(0, 0, capture.width, capture.height)
+				rotate(-170 * Math.PI / 180);
+				image(spostamento4, 100, 270, capture.height, capture.width/2.5);
+				
+				const spostamento5 = capture.get(0, 150, capture.width, capture.height)
+				rotate(-250 * Math.PI / 180);
+				image(spostamento5, -400, 120, capture.height, capture.width);
+
+				const spostamento6 = capture.get(0, 200, capture.width, capture.height)
+				rotate(-500 * Math.PI / 180);
+				image(spostamento6, -630, -300, capture.height, capture.width);
+
+				const spostamento7 = capture.get(0, 200, capture.width, capture.height)
+				rotate(-495 * Math.PI / 180);
+				image(spostamento7, 0, -300, capture.height/1.5, capture.width);
+
+				const spostamento8 = capture.get(0, 200, capture.width, capture.height)
+				rotate(-490 * Math.PI / 180);
+				image(spostamento8, 60,400, capture.height, capture.width);
+
+				const spostamento9 = capture.get(0, 0, capture.width, capture.height)
+				rotate(-570 * Math.PI / 180);
+				image(spostamento9, -500,-680, capture.height, capture.width);
+		
+	} else if (modo == '6') {
+		const spessore = 400
+				const passo = spessore / 5
+				const numX = width / passo
+	
+					for(let i=0; i<numX; i++) {
+					const rx = i * passo
+					const f = capture.get(200, 0, passo, capture.height)
+					const g = capture.get(0, 200, capture.width, passo)
+
+					tint(255, 200);
+					image(capture, 0, 0, capture.height, capture.width);
+					image(g,0, mouseY) 
+
+					tint(255, 100);
+					image(capture, 0, 0, capture.height, capture.width);
+					image(f,mouseX, 0)
+					}
+		
+	} else if (modo == '7') {
+		tint(255, 180);
+		
+		const spessore = 300
+		const passo = spessore / 5
+		const numX = width / passo
+		
+
+			for(let j=0; j<numX; j++) {
+			const rx = j * mouseX 
+			const rx2 = j * mouseY 
+			const f = capture.get(100, 0, capture.width/4, capture.height)
+			image(f,rx2 + mouseX, rx+ mouseY)
+			}
+		
+	} else if (modo == '8') {
+		tint(255, 180);
+		
+		const spessore = 300
+		const passo = spessore / 5
+		const numX = width / passo
+		
+
+			for(let j=0; j<numX; j++) {
+			const rx = j * mouseY
+			const f = capture.get(100, 0, capture.width/4, capture.height)
+			image(f,rx + mouseX, 0)
+			}
+			
+		
+	} else if (modo == '9') {
+		tint(255, 200);
+		
+			const spessore = 200
+			const passo = spessore / 2
+			const numX = height / passo
+
+			for(let j=0; j<numX; j++) {
+				const rx = j * passo
+				const f = capture.get(mouseX, 0, capture.width, capture.height)
+				image(f,rx, 0)
+				}
+		
+	} 
+
 		}
 		
 		// SCRIPT SALVA IMMAGINE 
@@ -237,48 +358,200 @@ const b1 = document.querySelector("#v1")
 			b1.addEventListener("click", function(e) {
 				b1.style.backgroundColor="none";
 				b1.style.borderColor="white";
+			//	b1.style.borderStroke="10px";
             	b2.style.background="none";
-				b2.style.borderColor="rgb(71, 69, 69)";
+				b2.style.borderColor="grey";
 				b3.style.background="none";
-				b3.style.borderColor="rgb(71, 69, 69)";
+				b3.style.borderColor="grey";
 				b4.style.background="none";
-				b4.style.borderColor="rgb(71, 69, 69)";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
 			})
 
 			const b2 = document.querySelector("#v2")
 			b2.addEventListener("click", function(e) {
 				b1.style.background="none";
-				b1.style.borderColor="rgb(71, 69, 69)";
+				b1.style.borderColor="grey";
             	b2.style.backgroundColor="none";
 				b2.style.borderColor="white";
 				b3.style.background="none";
-				b3.style.borderColor="rgb(71, 69, 69)";
+				b3.style.borderColor="grey";
 				b4.style.background="none";
-				b4.style.borderColor="rgb(71, 69, 69)";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
 			})
 
 			const b3 = document.querySelector("#v3")
 			b3.addEventListener("click", function(e) {
 				b1.style.background="none";
-				b1.style.borderColor="rgb(71, 69, 69)";
+				b1.style.borderColor="grey";
             	b2.style.background="none";
-				b2.style.borderColor="rgb(71, 69, 69)";
+				b2.style.borderColor="grey";
 				b3.style.backgroundColor="none";
 				b3.style.borderColor="white";
 				b4.style.background="none";
-				b4.style.borderColor="rgb(71, 69, 69)";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
 			})
 
 			const b4 = document.querySelector("#v4")
 			b4.addEventListener("click", function(e) {
 				b1.style.background="none";
-				b1.style.borderColor="rgb(71, 69, 69)";
+				b1.style.borderColor="grey";
             	b2.style.background="none";
-				b2.style.borderColor="rgb(71, 69, 69)";
+				b2.style.borderColor="grey";
 				b3.style.backgroundColor="none";
-				b3.style.borderColor="rgb(71, 69, 69)";
+				b3.style.borderColor="grey";
 				b4.style.background="none";
 				b4.style.borderColor="white";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
+			})
+
+			const b5 = document.querySelector("#v5")
+			b5.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="grey";
+            	b2.style.background="none";
+				b2.style.borderColor="grey";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="grey";
+				b4.style.background="none";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="white";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
+			})
+
+			const b6 = document.querySelector("#v6")
+			b6.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="grey";
+            	b2.style.background="none";
+				b2.style.borderColor="grey";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="grey";
+				b4.style.background="none";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="white";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
+			})
+
+			const b7 = document.querySelector("#v7")
+			b7.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="grey";
+            	b2.style.background="none";
+				b2.style.borderColor="grey";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="grey";
+				b4.style.background="none";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="white";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
+			})
+
+			const b8 = document.querySelector("#v8")
+			b8.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="grey";
+            	b2.style.background="none";
+				b2.style.borderColor="grey";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="grey";
+				b4.style.background="none";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="white";
+				b9.style.background="none";
+				b9.style.borderColor="grey";
+			})
+
+
+			const b9 = document.querySelector("#v9")
+			b9.addEventListener("click", function(e) {
+				b1.style.background="none";
+				b1.style.borderColor="grey";
+            	b2.style.background="none";
+				b2.style.borderColor="grey";
+				b3.style.backgroundColor="none";
+				b3.style.borderColor="grey";
+				b4.style.background="none";
+				b4.style.borderColor="grey";
+				b5.style.background="none";
+				b5.style.borderColor="grey";
+				b6.style.background="none";
+				b6.style.borderColor="grey";
+				b7.style.background="none";
+				b7.style.borderColor="grey";
+				b8.style.background="none";
+				b8.style.borderColor="grey";
+				b9.style.background="none";
+				b9.style.borderColor="white";
 			})
 </script>
 
