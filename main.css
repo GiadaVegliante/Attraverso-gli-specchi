@@ -25,18 +25,6 @@ margin-left: -200px;
 margin-top: -400px;	
 }
 
-.sottotitolo{
-    position: absolute;
-    color: rgba(255, 255, 255, 0.872);
-    font-family: Futura;
-    font-size: 20px;
-    font-weight: 100;
-    top:55%;
-    left:50%;
-    margin-left: -200px;
-    margin-top: -365px;	
-    }
-
 button{
 position: relative;
 bottom: 40%;
@@ -48,13 +36,11 @@ cursor: pointer;
 border: 1px solid grey;
 }
 
-.interfaccia {
-    position: absolute;
-    left:50%;
-    margin-top: -240px;	
-    margin-left: 45px;
-    top:55%;
+/*
+var {
+    color: white;
 }
+*/
 
 .indice{
     position: absolute;
