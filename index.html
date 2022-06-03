@@ -12,7 +12,11 @@
 <body>
 	<a class="indice" href="https://ixd-supsi.github.io/specchiodellemiebrame/"> Indice </a>
 	<div class="Testo">Attraverso gli specchi</div>
-	<div class="interfaccia"><var id="modo"></var></div>
+
+	 <div class="ingombro" onclick="toggleInfo()">
+    <span class="testo2" id="scomparsa">
+    Clicca per iniziare</span>
+	
 	<!-- SCRIPT WEBCAM -->
 	<script>
 		let capture
@@ -312,6 +316,18 @@
 			//else if (key == 'x') { }
 		}
 	</script>
+
+	   <script>
+
+     // Script scomparsa/comparsa testo
+function toggleInfo() {
+ let text = document.getElementById("scomparsa");
+ if(text.style.visibility === 'hidden'){
+   text.style.visibility = 'visible';
+ } else {
+     text.style.visibility = 'hidden';
+ } }
+   </script>
 
 	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
 </body>
